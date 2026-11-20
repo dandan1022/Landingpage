@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Palengke Express connects customers with approved local market sellers and delivery riders for fast, trackable grocery delivery.">
+<title>Palengke Express — Fresh Market, Delivered</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --green:#14835f;--green-2:#0e6349;--deep:#14382d;--mint:#eaf7f1;--cream:#fbfdfb;
+ --line:#dbe9e1;--text:#17352c;--muted:#71877f;--white:#fff;--shadow:0 28px 70px rgba(25,76,58,.14);
+ --display:"Manrope",system-ui,sans-serif;--body:"DM Sans",system-ui,sans-serif;--wrap:1180px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(#fff 0 58%,#f8fbf9 100%);color:var(--text);font:16px/1.6 var(--body)}
+a{color:inherit}img{max-width:100%;display:block}.wrap{width:min(var(--wrap),calc(100% - 32px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(219,233,225,.9)}
+.nav{height:76px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font:800 1.15rem var(--display)}
+.brand-mark{font-size:1.7rem}.brand b span{color:var(--green)}.navlinks{margin-left:auto;display:flex;gap:26px}.navlinks a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.94rem}.navlinks a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:14px;border:1px solid transparent;text-decoration:none;font-weight:700;transition:.18s ease}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--green);color:white;box-shadow:0 12px 28px rgba(20,131,95,.20)}.btn-soft{background:white;border-color:var(--line)}
+.hero{padding:78px 0 64px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:58px}.hero-copy{display:flex;flex-direction:column;gap:22px}.pill{width:max-content;max-width:100%;padding:8px 14px;border:1px solid #cfe6da;background:var(--mint);color:var(--green-2);border-radius:999px;font-weight:700;font-size:.86rem}.hero h1{font:800 clamp(3rem,6.8vw,5.4rem)/.98 var(--display);letter-spacing:-.055em;margin:0}.hero h1 em{font-style:normal;color:var(--green)}.lead{font-size:1.14rem;color:var(--muted);max-width:600px}.cta{display:flex;flex-wrap:wrap;gap:12px}.micro{font-size:.9rem;color:var(--muted)}
+.hero-visual{position:relative;min-height:590px}.phone{position:absolute;width:265px;border-radius:34px;background:#111;padding:7px;box-shadow:var(--shadow)}.phone img{border-radius:28px}.phone.one{right:20px;top:0;transform:rotate(3deg)}.phone.two{left:20px;top:80px;transform:rotate(-5deg)}
+.float-card{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);width:min(370px,90%);background:white;border:1px solid var(--line);box-shadow:0 18px 48px rgba(20,56,45,.16);border-radius:20px;padding:17px 18px;display:flex;gap:13px;align-items:center}.float-icon{width:44px;height:44px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:1.35rem}.float-card small{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.float-card b{display:block;font:700 .98rem var(--display)}
+.trust{border-block:1px solid var(--line);background:#fff}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-grid div{padding:24px 22px;border-left:1px solid var(--line)}.trust-grid div:first-child{border-left:0}.trust b{font:800 1.6rem var(--display);display:block}.trust span{font-size:.9rem;color:var(--muted)}
+.section{padding:94px 0}.section-head{max-width:710px;margin-bottom:38px}.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--green);font-size:.78rem}.section h2{font:800 clamp(2.1rem,4.5vw,3.4rem)/1.04 var(--display);letter-spacing:-.04em;margin:9px 0 12px}.section-head p{color:var(--muted);font-size:1.05rem}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.role{background:white;border:1px solid var(--line);border-radius:24px;padding:28px;min-height:235px;display:flex;flex-direction:column;gap:12px;box-shadow:0 12px 35px rgba(22,65,50,.05)}.role-icon{width:52px;height:52px;border-radius:16px;background:var(--mint);display:grid;place-items:center;font-size:1.5rem}.role h3{font:800 1.35rem var(--display);margin:0}.role p{color:var(--muted);margin:0}.role a{margin-top:auto;color:var(--green);font-weight:800;text-decoration:none}
+.showcase{background:var(--deep);color:white;border-radius:34px;padding:46px;overflow:hidden}.show-grid{display:block}.show-copy{max-width:760px}.showcase .eyebrow{color:#aee6d1}.showcase h2{margin:8px 0 14px}.showcase p{color:#c9d7d2}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-top:24px}.check{display:flex;gap:10px;align-items:flex-start}.check i{width:23px;height:23px;border-radius:50%;background:#dff7eb;color:var(--green-2);font-style:normal;display:grid;place-items:center;font-weight:800;flex:none}.shots{display:flex;justify-content:center;align-items:flex-end;gap:22px;margin:42px auto 0;max-width:860px;width:100%}.shots img{width:220px;max-width:30%;height:auto;border-radius:24px;box-shadow:0 22px 55px rgba(0,0,0,.26);border:1px solid rgba(255,255,255,.12);flex:0 0 auto}.shots img:nth-child(2){transform:translateY(-18px)}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.feature{padding:26px;border:1px solid var(--line);border-radius:22px;background:white}.feature h3{font:800 1.2rem var(--display);margin:8px 0}.feature p{color:var(--muted);margin:0}.feature-icon{font-size:1.35rem}
+.final{padding:76px 0 96px}.final-box{background:linear-gradient(135deg,#eaf7f1,#fdfefe);border:1px solid #cfe5d9;border-radius:32px;padding:48px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.final h2{font:800 clamp(2rem,4vw,3rem)/1.05 var(--display);letter-spacing:-.035em;margin:0 0 12px}.final p{color:var(--muted);margin:0;max-width:690px}
+footer{padding:28px 0 50px;color:var(--muted);font-size:.9rem}.footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:24px}
+@media(max-width:900px){.navlinks{display:none}.nav .btn{margin-left:auto}.hero{grid-template-columns:1fr;padding-top:52px}.hero-visual{min-height:530px;max-width:560px;width:100%;margin:auto}.roles{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}.shots{gap:14px;margin-top:34px}.shots img{width:180px;max-width:31%}.features{grid-template-columns:1fr}.final-box{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr 1fr}.trust-grid div:nth-child(3){border-left:0;border-top:1px solid var(--line)}.trust-grid div:nth-child(4){border-top:1px solid var(--line)}}
+@media(max-width:560px){.wrap{width:min(100% - 22px,var(--wrap))}.nav{height:68px}.nav .btn{height:42px;padding:0 14px}.hero{padding-top:38px;gap:20px}.hero h1{font-size:clamp(2.75rem,15vw,4.2rem)}.hero-visual{min-height:450px}.phone{width:205px;border-radius:27px;padding:5px}.phone img{border-radius:22px}.phone.two{left:0;top:72px}.phone.one{right:0}.float-card{bottom:5px}.trust-grid{grid-template-columns:1fr 1fr}.section{padding:72px 0}.showcase{padding:30px 20px;border-radius:26px}.checklist{gap:12px}.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:28px;align-items:end}.shots img{width:100%;max-width:none;border-radius:16px}.shots img:nth-child(2){transform:translateY(-10px)}.final-box{padding:30px 22px}.footer{flex-direction:column}}
+
+.gallery-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:34px}.gallery-head .section-head{margin:0}.gallery-note{max-width:360px;color:var(--muted);font-size:.95rem}.screen-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.screen-card{background:white;border:1px solid var(--line);border-radius:24px;padding:12px;box-shadow:0 14px 38px rgba(22,65,50,.06);transition:.2s ease}.screen-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(22,65,50,.12)}.screen-card .screen{overflow:hidden;border-radius:17px;background:#f3f7f5;aspect-ratio:828/1792}.screen-card img{width:100%;height:100%;object-fit:cover;object-position:top}.screen-copy{padding:14px 6px 7px}.screen-copy small{display:block;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.69rem;margin-bottom:4px}.screen-copy h3{font:800 1rem/1.25 var(--display);margin:0}.screen-copy p{font-size:.86rem;line-height:1.45;color:var(--muted);margin:5px 0 0}.screen-card.featured{grid-column:span 2;display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,.68fr);align-items:center;padding:16px}.screen-card.featured .screen{aspect-ratio:828/1792}.screen-card.featured .screen-copy{padding:20px}.screen-card.featured .screen-copy h3{font-size:1.35rem}
+@media(max-width:900px){.screen-gallery{grid-template-columns:repeat(2,1fr)}.screen-card.featured{grid-column:span 2}}
+@media(max-width:560px){.gallery-head{display:block}.gallery-note{margin-top:12px}.screen-gallery{grid-template-columns:1fr 1fr;gap:10px}.screen-card{padding:7px;border-radius:18px}.screen-card .screen{border-radius:13px}.screen-copy{padding:10px 4px 5px}.screen-copy p{display:none}.screen-copy h3{font-size:.86rem}.screen-card.featured{grid-column:span 2;grid-template-columns:1fr 1fr;padding:9px}.screen-card.featured .screen-copy{padding:10px}.screen-card.featured .screen-copy h3{font-size:1rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="brand-mark">🛍️</span><b>palengke<span>express</span></b></a>
+    <nav class="navlinks"><a href="#how">How it works</a><a href="#screens">Screens</a><a href="#features">Features</a><a href="#roles">For everyone</a></nav>
+    <a class="btn btn-primary" href="https://palengke-express-1.onrender.com/">Open Palengke Express</a>
+  </div>
+</header>
+<main id="top">
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <span class="pill">Fresh market goods • Local sellers • Local riders</span>
+      <h1>Your local <em>palengke</em>, delivered.</h1>
+      <p class="lead">Palengke Express makes it easier to buy fresh market goods from approved local sellers, arrange delivery, and follow the order from market pickup to your doorstep.</p>
+      <div class="cta"><a class="btn btn-primary" href="https://palengke-express-1.onrender.com/">Start shopping</a><a class="btn btn-soft" href="#how">See how it works</a></div>
+      <p class="micro">Customer • Seller • Driver • Admin — all connected in one delivery flow.</p>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="phone two"><img src="assets/customer-home.png" alt=""></div>
+      <div class="phone one"><img src="assets/driver-dashboard.png" alt=""></div>
+      <div class="float-card"><span class="float-icon">📍</span><span><small>Live delivery flow</small><b>Seller pickup → Rider → Customer</b></span></div>
+    </div>
+  </section>
+  <section class="trust"><div class="wrap trust-grid"><div><b>4 roles</b><span>Customer, seller, driver and admin</span></div><div><b>Exact pin</b><span>Customer chooses the delivery location</span></div><div><b>COD</b><span>Simple cash-on-delivery checkout</span></div><div><b>Live status</b><span>Order progress from acceptance to delivery</span></div></div></section>
+
+  <section class="wrap section" id="roles">
+    <div class="section-head"><span class="eyebrow">Built for the whole market</span><h2>One platform. Three active roles.</h2><p>Each role gets a focused dashboard instead of a cluttered one-size-fits-all page.</p></div>
+    <div class="roles">
+      <article class="role"><span class="role-icon">🛒</span><h3>Customer</h3><p>Choose an approved seller, browse fresh items, pin your exact delivery location and follow your order status.</p><a href="https://palengke-express-1.onrender.com/">Shop as customer →</a></article>
+      <article class="role"><span class="role-icon">🏪</span><h3>Seller</h3><p>Manage store hours and products, accept customer orders, prepare items and book an available rider.</p><a href="https://palengke-express-1.onrender.com/">Open seller portal →</a></article>
+      <article class="role"><span class="role-icon">🛵</span><h3>Driver</h3><p>Receive delivery requests, accept jobs, navigate from the seller to the customer and update delivery progress.</p><a href="https://palengke-express-1.onrender.com/">Open driver portal →</a></article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="how">
+    <div class="showcase">
+      <div class="show-grid">
+        <div class="show-copy"><span class="eyebrow">How Palengke Express works</span><h2>From market stall to doorstep.</h2><p>A simple order flow keeps the customer, seller and driver synchronized.</p><div class="checklist">
+          <div class="check"><i>1</i><span>Customer selects a seller and adds fresh goods to the basket.</span></div>
+          <div class="check"><i>2</i><span>Customer places an order using an exact map pin and delivery address.</span></div>
+          <div class="check"><i>3</i><span>Seller accepts, prepares the order and books a driver.</span></div>
+          <div class="check"><i>4</i><span>Driver accepts the delivery and updates progress until arrival.</span></div>
+          <div class="check"><i>5</i><span>Customer confirms the order was actually delivered.</span></div>
+        </div>
+        </div>
+        <div class="shots"><img src="assets/customer-products.png" alt="Customer product list"><img src="assets/customer-checkout.png" alt="Customer checkout with exact delivery pin"><img src="assets/seller-dashboard.png" alt="Seller dashboard"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrap section" id="screens">
+    <div class="gallery-head">
+      <div class="section-head"><span class="eyebrow">Actual system screens</span><h2>See Palengke Express in action.</h2><p>These are real screenshots from the working Customer, Seller and Driver interfaces you provided.</p></div>
+      <p class="gallery-note">The landing page now shows the actual experience users will see after entering the platform.</p>
+    </div>
+    <div class="screen-gallery">
+      <article class="screen-card featured"><div class="screen"><img src="assets/customer-home.png" alt="Customer seller store selection screen"></div><div class="screen-copy"><small>Customer</small><h3>Choose an approved local seller</h3><p>Customers begin by selecting a seller store before browsing that seller’s available market items.</p></div></article>
+      <article class="screen-card"><div class="screen"><img src="assets/customer-products.png" alt="Customer fresh product catalog"></div><div class="screen-copy"><small>Customer</small><h3>Browse fresh goods</h3><p>Products are grouped by category with stock and pricing shown clearly.</p></div></article>
+      <article class="screen-card"><div class="screen"><img src="assets/customer-checkout.png" alt="Customer exact delivery pin map"></div><div class="screen-copy"><small>Checkout</small><h3>Pin the exact delivery point</h3><p>The customer can tap the map or use device GPS to mark the destination.</p></div></article>
+      <article class="screen-card"><div class="screen"><img src="assets/customer-order-total.png" alt="Customer checkout total and place order button"></div><div class="screen-copy"><small>Checkout</small><h3>Review total and place order</h3><p>Subtotal, delivery fee and COD total are shown before confirming.</p></div></article>
+      <article class="screen-card"><div class="screen"><img src="assets/seller-dashboard.png" alt="Seller portal dashboard"></div><div class="screen-copy"><small>Seller</small><h3>Manage the market stall</h3><p>The seller sees orders, store items, delivered orders and store availability.</p></div></article>
+      <article class="screen-card"><div class="screen"><img src="assets/seller-order.png" alt="Seller customer order acceptance screen"></div><div class="screen-copy"><small>Seller</small><h3>Accept and process orders</h3><p>Order details, customer address, items, total and progress are kept in one view.</p></div></article>
+      <article class="screen-card"><div class="screen"><img src="assets/seller-store-management.png" alt="Seller store hours and add item screen"></div><div class="screen-copy"><small>Seller</small><h3>Control hours and inventory</h3><p>Sellers can set opening hours and add new products to their store.</p></div></article>
+      <article class="screen-card"><div class="screen"><img src="assets/driver-dashboard.png" alt="Driver portal dashboard"></div><div class="screen-copy"><small>Driver</small><h3>Receive delivery jobs</h3><p>Drivers can see booking requests, active deliveries, completed trips and COD.</p></div></article>
+      <article class="screen-card featured"><div class="screen"><img src="assets/driver-order.png" alt="Driver delivery job details and map"></div><div class="screen-copy"><small>Driver</small><h3>Accept the delivery and follow the route</h3><p>The rider receives the seller pickup, customer destination, order amount and live delivery map in the same workflow.</p></div></article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="features">
+    <div class="section-head"><span class="eyebrow">Core experience</span><h2>Designed around real delivery problems.</h2><p>The landing page highlights the strongest parts of your current system rather than adding features your project does not use.</p></div>
+    <div class="features">
+      <article class="feature"><span class="feature-icon">📍</span><h3>Exact delivery pin</h3><p>Customers can mark the exact house or gate where the rider should deliver, with the written address kept as a reference.</p></article>
+      <article class="feature"><span class="feature-icon">🧺</span><h3>Seller-specific stores</h3><p>Approved sellers appear as separate stores, so customers only see the items sold by the selected seller.</p></article>
+      <article class="feature"><span class="feature-icon">🔔</span><h3>Clear order progress</h3><p>Order status moves through seller acceptance, preparation, driver booking, rider assignment and delivery confirmation.</p></article>
+      <article class="feature"><span class="feature-icon">🛡️</span><h3>Admin approval</h3><p>Seller and driver registrations stay pending until approved, helping keep the marketplace controlled and organized.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap final"><div class="final-box"><div><h2>Fresh goods. Local sellers. Faster delivery.</h2><p>Use this page as the public landing page, then send users into your existing Customer, Seller, Driver or Admin login flow.</p></div><a class="btn btn-primary" href="https://palengke-express-1.onrender.com/">Enter Palengke Express</a></div></section>
+</main>
+<footer><div class="wrap footer"><span><b>🛍️ palengkeexpress</b></span><span>Palengke Express • Local market delivery platform</span></div></footer>
+</body>
+</html>
